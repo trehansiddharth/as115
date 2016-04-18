@@ -1,4 +1,8 @@
-; Included from "test1.h.asm" by AS115:
+; Main file for this project
+
+; ==== Included from "test1.h.asm" by AS115: ====
+; Header file that defines all the register memonics
+
 .equ led, 90h
 
 .org 0000h
@@ -10,7 +14,9 @@ main:
     lcall blinkled
     sjmp main
 
-; Included from "util.lib.asm" by AS115:
+; ==== Included from "util.lib.asm" by AS115: ====
+; Some utility subroutines that we want to include in our main asm file
+
 delay:
     mov r0, #0ffh
     delay_loop:

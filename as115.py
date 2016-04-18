@@ -30,7 +30,7 @@ while (len(stack) > 0):
                 line = line.rstrip()
                 if line.startswith('.inc'):
                     incfile = line[5:]
-                    stack.append(('line', '; Included from \"' + incfile + '\" by AS115:'))
+                    stack.append(('line', '; ==== Included from \"' + incfile + '\" by AS115: ===='))
                     stack.append(('.inc', incfile))
                 else:
                     stack.append(('line', line))
@@ -55,8 +55,6 @@ if args.Another is not None:
     as31args.append('-A' + args.Another)
 as31args.append('-F' + args.Format)
 as31args.append(outputFilename)
-
-print(as31args)
 
 # Run AS31 on the resulting asm file
 subprocess.call(as31args)
