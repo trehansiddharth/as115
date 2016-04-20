@@ -1,6 +1,10 @@
 # as115
 The as31 assembler used for MIT's 6.115 course (Microcontrollers Lab) loaded with extra preprocessing directives that makes it nicer to use.
 
+## Using
+
+`as115.py` located in the root folder can be used as a python script by running `python as115.py` (with the appropriate arguments). If the computer you are using does not have python installed, you can use the standalone executable located in the root folder called `as115.exe` by running `as115.exe` (also with the appropriate arguments). This executable was generated using PyInstaller, and can be generated for any platform (though this one is specifically targeted for Windows). You may find it useful to copy these two files to a directory in your `PATH`.
+
 ## Features
 
 It allows you to place `.inc` directive anywhere in an assembly file that tells the preprocessor to insert the contents of a given file in your assembly file. I made it so that I could distribute large projects over multiple files. Check out the files in the `Test` directory for usage.
